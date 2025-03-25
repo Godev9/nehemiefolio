@@ -10,12 +10,12 @@ var port = 500;
 app.set("port", port);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "page/index.html")));
+app.use(express.static(path.join(__dirname, "index.html")));
 app.use(express.static("page"));
 
 // Routing
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "page/index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.post("/send_email", function (req, res) {
