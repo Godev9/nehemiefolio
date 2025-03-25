@@ -21,14 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail"
-    />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -37,36 +30,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=help"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,0&icon_names=help"
-    />
 
     <style>
       * {
         font-family: "Poppins", sans-serif;
-      }
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 15;
-      }
-
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 1, "wght" 0, "GRAD" 0, "opsz" 24;
-      }
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 1, "wght" 0, "GRAD" 0, "opsz" 24;
-      }
-
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
-
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
       }
 
       .fade-up {
@@ -910,11 +877,9 @@
                 placeholder="Subject"
                 class="w-full p-2 bg-gray-700 rounded-xl text-[14px] text-white focus:outline-none pl-10"
               />
-              <span
-                class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              >
-                person
-              </span>
+              <i
+                class="fa-solid fa-circle-question absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              ></i>
             </div>
             <div class="relative">
               <input
@@ -924,25 +889,26 @@
                 placeholder="Enter your email"
                 class="w-full p-2 bg-gray-700 rounded-xl text-[14px] text-white focus:outline-none pl-10"
               />
-              <span
-                class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              >
-                mail
-              </span>
+              <i
+                class="fa-solid fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              ></i>
             </div>
             <div class="relative">
-              <!-- Flex container to align icon and textarea -->
-              <div class="absolute left-3 top-1 text-gray-400 text-lg">
-                <i class="bx bxs-edit-alt" style="font-weight: 900"></i>
-              </div>
+              <!-- Icon -->
+              <i
+                class="fa-solid fa-marker absolute left-3 top-4 transform -translate-y-1/2 text-gray-400 text-lg"
+              ></i>
+
+              <!-- Textarea -->
               <textarea
                 id="message"
                 name="message"
                 placeholder="Message"
                 rows="4"
-                class="w-full p-2 pl-10 bg-gray-700 rounded-xl text-[14px] text-white focus:outline-none resize-none"
+                class="w-full p-2 pl-12 bg-gray-700 rounded-xl text-[14px] text-white focus:outline-none resize-none"
               ></textarea>
             </div>
+
             <button
               type="submit"
               value="Send"
