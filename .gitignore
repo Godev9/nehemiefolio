@@ -1,0 +1,86 @@
+.env 
+node_modules/
+
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
+const cors = require("cors"); // Add cors module
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(cors()); // Allow all origins for now (you can customize this)
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "your-email@gmail.com",
+    pass: "your-email-password", // Consider using environment variables for security
+  },
+});
+
+app.post("/send-message", (req, res) => {
+  const { name, email, message } = req.body;
+
+  const mailOptions = {
+    from: email,
+    to: "your-email@gmail.com", // Email to receive the contact form submissions
+    subject: "New Contact Form Submission",
+    text: `You have a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).json({ message: "Error sending email", error });
+    }
+    res.status(200).json({ message: "Message sent successfully", info });
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+
+
+
+
+// Attach event listeners to the logo and home button
+              document.getElementById('logo').addEventListener('click', scrollToTop);
+              document.getElementById('home').addEventListener('click', scrollToTop);
+
+               // Handle form submission
+              document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Create data object
+                const formData = { name, email, message };
+
+                // Send form data to backend
+                fetch('http://localhost:5000/send-message', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(formData),
+                })
+                .then(response => response.json())
+                .then(data => {
+                  alert('Message sent successfully!');
+                  // Reset form fields after submission
+                  document.getElementById('contactForm').reset();
+                })
+                .catch((error) => {
+                  console.error('Error:', error);
+                  alert('There was an issue with sending your message.');
+                });
+              });
