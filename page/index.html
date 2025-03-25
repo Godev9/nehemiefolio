@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | UI/UX Designer & Monteur Vidéo</title>
+    <title>Portfolio | UI/UX Designer & Video Editor</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- <link rel="stylesheet" href="./output.css" /> -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    /> -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -55,8 +49,6 @@
     <style>
       * {
         font-family: "Poppins", sans-serif;
-        /* overflow-x: hidden; */
-        /* Prevent horizontal scrolling */
       }
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 15;
@@ -119,17 +111,11 @@
 
       /* Magnetic Field Button */
       .btn {
-        /* position: relative; */
-        /* padding: 1.5rem 3rem; */
         font-size: 1.1rem;
-        /* font-weight: 600; */
-        /* color: #fff; */
         background: none;
         border: none;
         cursor: pointer;
-        /* overflow: hidden; */
         transition: all 0.4s ease;
-        /* min-width: 200px; */
         z-index: 1;
       }
 
@@ -173,10 +159,7 @@
 
       .bTn:link,
       .bTn:visited {
-        /* text-transform: uppercase; */
         text-decoration: none;
-        /* padding: 15px 40px; */
-        /* display: inline-block; */
         border-radius: 100px;
         transition: all 0.2s;
         position: absolute;
@@ -191,11 +174,6 @@
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       }
-
-      /* .btn-white {
-    background-color: #fff;
-    color: #777;
-} */
 
       .bTn::after {
         content: "";
@@ -249,7 +227,7 @@
         <!-- Logo and Brand Name -->
         <div
           id="logo"
-          class="tracking-tighter text-2xl font-bold cursor-pointer fade-up group hover:animate-bounce transition duration-300"
+          class="tracking-tighter text-2xl font-bold cursor-pointer fade-up"
         >
           <a href="#home">Nehe<span class="text-[#3A9FE3]">mie.</span></a>
         </div>
@@ -342,14 +320,11 @@
     </header>
 
     <!-- Hero Section -->
-    <!-- <section
-      class="text-center bg-[url('images/nehe.png')] bg-cover bg-center bg-no-repeat min-h-screen md:min-h-[500px] py-20 pt-48 overflow-x-hidden"
-    > -->
     <section
       class="relative text-center bg-[url('images/nehe.png')] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[500px] py-10 md:py-20 pt-40 md:pt-48 overflow-hidden bg-[length:250%] md:bg-cover"
     >
       <img
-        src="/images/aava.jpeg"
+        src="/images/ne.jpeg"
         alt="NehemieDaanon"
         class="mx-auto rounded-full w-20 h-20 object-cover fade-down"
       />
@@ -374,7 +349,6 @@
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-800 relative overflow-hidden">
       <div class="container mx-auto text-center">
-        <!-- <h3 class="text-3xl font-bold text-[#3A9FE3] opacity-0 translate-y-10 transition-all duration-700">My services</h3> -->
         <h3
           class="text-3xl mt-0 font-bold text-[#3A9FE3] opacity-0 translate-x-10 transition-all duration-1000"
           id="services-desc"
@@ -742,7 +716,7 @@
         </svg>
       </div>
       <p
-        class="text-gray-400 mt-4 opacity-0 translate-x-10 transition-all duration-[2000ms]"
+        class="text-gray-400 mt-4 opacity-0 translate-x-10 transition-all duration-[2000ms] mx-1 sm:mx-0"
         id="services-desc"
       >
         Check My Wonderful Works,
@@ -876,7 +850,7 @@
               class="mt-0 text-white text-[12px] hover:text-[#2e7cbf] flex items-center gap-2"
             >
               <i class="bx bx-phone text-[#3A9FE3] text-lg"></i>
-              +229(019)-113-2793
+              +22991132793
             </p>
 
             <!-- Social Media Icons -->
@@ -924,7 +898,6 @@
             </div>
           </div>
         </div>
-
         <div class="w-full md:w-1/2 mt-5 md:mt-0">
           <h4 class="text-xl font-semibold text-white">Contact Form</h4>
           <form action="/send_email" method="post" class="mt-2 space-y-4">
@@ -957,7 +930,6 @@
                 mail
               </span>
             </div>
-
             <div class="relative">
               <!-- Flex container to align icon and textarea -->
               <div class="absolute left-3 top-1 text-gray-400 text-lg">
@@ -978,27 +950,13 @@
             >
               Submit
               <i class="bx bxs-check-circle"></i>
-
-              <!-- <i class="bx bxs-cloud-download"></i> -->
             </button>
           </form>
         </div>
       </div>
     </section>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script> -->
-    <!-- <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script> -->
-    <!-- </body> -->
-    <!-- </html> -->
-    <!-- </section> -->
   </body>
 </html>
