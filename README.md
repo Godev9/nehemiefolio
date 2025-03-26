@@ -16,7 +16,7 @@ This portfolio project displays my work, projects, and technical skills. It is d
 
 - **Frontend:**
   *- HTML*
-  - CSS (TailwindCSS)
+  *- CSS (TailwindCSS)*
   *- JavaScript*
 
 - **Backend:**
